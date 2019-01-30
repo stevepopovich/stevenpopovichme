@@ -1,20 +1,65 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="background-img">
+  <div [ngClass]="{'show-card': showHome, 'hidden-card': !showHome}" class="home center-content">
+    <mat-grid-list cols="1" rowHeight="40px" gutterSize="0" class="home-column">
+      <mat-grid-tile [rowspan]="4"></mat-grid-tile>
+      <mat-grid-tile *ngIf="!isMobile()" [colspan]="1" [rowspan]="2" class="title-text"> Because what we leave behind
+        matters </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="10">
+        <mat-icon svgIcon="html" class="html-icon"></mat-icon>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div *ngIf="!isMobile()" style="margin-top: 16px">
+    <mat-grid-list cols="1" rowHeight="40px" gutterSize="4" class="button-grid-desktop">
+      <mat-grid-tile [colspan]="1">
+        <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button>CONTACT</button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <button (click)="showResumeCard()" class="consistent-button-width" mat-raised-button>RESUME</button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <button (click)="goToChalkbordDotCom()" class="consistent-button-width" mat-raised-button> CHALKBORD </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <button (click)="goToLinkedIn()" mat-raised-button class="consistent-button-width"> LINKEDIN </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <button (click)="goToGithub()" mat-raised-button class="consistent-button-width"> GITHUB </button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div *ngIf="isMobile()" style="margin-top: 16px">
+    <mat-grid-list cols="2" rowHeight="40px" gutterSize="4" class="button-grid-mobile">
+      <mat-grid-tile [colspan]="1">
+        <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button>CONTACT</button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <button (click)="showResumeCard()" class="consistent-button-width" mat-raised-button>RESUME</button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <button (click)="goToChalkbordDotCom()" class="consistent-button-width" mat-raised-button> CHALKBORD </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <button (click)="goToLinkedIn()" mat-raised-button class="consistent-button-width"> LINKEDIN </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2">
+        <button (click)="goToGithub()" mat-raised-button class="consistent-button-width"> GITHUB </button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div class="content-area center-content">
+    <mat-card *ngIf="!isMobile()" [ngClass]="{'hidden-card': !showResume, 'show-card': showResume}" class="resume-card">
+      <iframe class="resume" src="https://docs.google.com/document/d/e/2PACX-1vTrkvMO7F1g-jbKoZTu28BNN1z8GF79sgtSOieABaVdt0gqoPFSiZ3odfPI_lvHlaBG6puUxu3UUJyz/pub?embedded=true">
+      </iframe>
+    </mat-card>
+    <mat-card *ngIf="isMobile()" [ngClass]="{'hidden-card': !showResume, 'show-card': showResume}" class="resume-card-mobile">
+      <iframe class="resume-mobile" src="https://docs.google.com/document/d/e/2PACX-1vSVK578Ta9CB7RqwWC6aFqVkr7wbM_soSS5UJBON-rsljDgMWInhv9dJ85Cc4QVPfg4FPoPk7QgP78N/pub?embedded=true">
+      </iframe>
+    </mat-card>
+    <mat-card [ngClass]="{'hidden-card': !showContact,'show-card': showContact}" class="contact-me-card">
+      <h3> Contact me </h3>
+      <p> Email: stevepopovich8@gmail.com </p>
+      <img src="assets/me.jpg" class="me-face" />
+    </mat-card>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
