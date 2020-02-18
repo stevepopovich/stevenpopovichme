@@ -1,46 +1,7 @@
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 
-.resume {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.resume-mobile {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.resume-card {
-  padding: 0;
-  margin: 16px;
-  width: 720px;
-  float: right;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 360px;
-  transition: all 0.75s;
-  position: absolute;
-  max-width: 100%;
-  height: 100%;
-}
-
-.resume-card-mobile {
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 360px;
-  transition: all 0.75s;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-}
-
 .background-img {
-  background-image: url("../assets/whole-comp.jpg");
+  background-image: url("../assets/inverted.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -79,11 +40,6 @@
   width: 100%;
   position: absolute;
   height: calc(100% - 108px);
-}
-
-.chalkbord-home-screenshot {
-  width: 360px;
-  height: auto;
 }
 
 .me-face {
@@ -157,6 +113,8 @@
   width: 115px;
   margin-top: 0px;
   margin-bottom: 0px;
+  color: white;
+  background-color: black;
 }
 
 .c38 {
@@ -169,12 +127,12 @@
   font-size: 36px;
   text-align: center;
   font-style: italic;
-  color: white;
-  text-shadow: rgb(0, 0, 0) 0.7px 0px 0px,
-    rgb(0, 0, 0) 0.0992221px 0.692932px 0px,
-    rgb(0, 0, 0) -0.671871px 0.196441px 0px,
-    rgb(0, 0, 0) -0.289692px -0.637243px 0px,
-    rgb(0, 0, 0) 0.589746px -0.377094px 0px;
+  color: black;
+  text-shadow: rgb(255, 255, 255) 0.7px 0px 0px,
+  rgb(255, 255, 255) 0.0992221px 0.692932 0px,
+  rgb(255, 255, 255) -0.671871px 0.196441px 0px,
+  rgb(255, 255, 255) -0.289692px -0.637243px 0px,
+  rgb(255, 255, 255) 0.589746px -0.377094px 0px;
 }
 
 .gamechanger-button {
