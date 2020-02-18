@@ -12,50 +12,42 @@
   <div *ngIf="!isMobile()" style="margin-top: 16px">
     <mat-grid-list cols="1" rowHeight="40px" gutterSize="4" class="button-grid-desktop">
       <mat-grid-tile [colspan]="1">
-        <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button>CONTACT</button>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="1">
-        <button (click)="showResumeCard()" class="consistent-button-width" mat-raised-button>RESUME</button>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="1">
-        <button (click)="goToChalkbordDotCom()" class="consistent-button-width" mat-raised-button> CHALKBORD </button>
+        <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button> CONTACT </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
         <button (click)="goToLinkedIn()" mat-raised-button class="consistent-button-width"> LINKEDIN </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
         <button (click)="goToGithub()" mat-raised-button class="consistent-button-width"> GITHUB </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <button (click)="goToMedium()" class="consistent-button-width" mat-raised-button> MEDIUM </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <button (click)="goToGamechanger()" class="consistent-button-width gamechanger-button" mat-raised-button> GC </button>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
   <div *ngIf="isMobile()" style="margin-top: 16px">
     <mat-grid-list cols="2" rowHeight="40px" gutterSize="4" class="button-grid-mobile">
       <mat-grid-tile [colspan]="1">
-        <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button>CONTACT</button>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="1">
-        <button (click)="showResumeCard()" class="consistent-button-width" mat-raised-button>RESUME</button>
-      </mat-grid-tile>
-      <mat-grid-tile [colspan]="1">
-        <button (click)="goToChalkbordDotCom()" class="consistent-button-width" mat-raised-button> CHALKBORD </button>
+        <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button> CONTACT </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
         <button (click)="goToLinkedIn()" mat-raised-button class="consistent-button-width"> LINKEDIN </button>
       </mat-grid-tile>
-      <mat-grid-tile [colspan]="2">
+      <mat-grid-tile [colspan]="1">
         <button (click)="goToGithub()" mat-raised-button class="consistent-button-width"> GITHUB </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <button (click)="goToMedium()" class="consistent-button-width" mat-raised-button> MEDIUM </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2">
+        <button (click)="goToGamechanger()" class="consistent-button-width gamechanger-button" mat-raised-button> </button>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
   <div class="content-area center-content">
-    <mat-card *ngIf="!isMobile()" [ngClass]="{'hidden-card': !showResume, 'show-card': showResume}" class="resume-card">
-      <iframe class="resume" src="https://docs.google.com/document/d/e/2PACX-1vTrkvMO7F1g-jbKoZTu28BNN1z8GF79sgtSOieABaVdt0gqoPFSiZ3odfPI_lvHlaBG6puUxu3UUJyz/pub?embedded=true">
-      </iframe>
-    </mat-card>
-    <mat-card *ngIf="isMobile()" [ngClass]="{'hidden-card': !showResume, 'show-card': showResume}" class="resume-card-mobile">
-      <iframe class="resume-mobile" src="https://docs.google.com/document/d/e/2PACX-1vSVK578Ta9CB7RqwWC6aFqVkr7wbM_soSS5UJBON-rsljDgMWInhv9dJ85Cc4QVPfg4FPoPk7QgP78N/pub?embedded=true">
-      </iframe>
-    </mat-card>
     <mat-card [ngClass]="{'hidden-card': !showContact,'show-card': showContact}" class="contact-me-card">
       <h3> Contact me </h3>
       <p> Email: stevepopovich8@gmail.com </p>

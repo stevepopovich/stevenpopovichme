@@ -13,7 +13,6 @@ export class AppComponent implements AfterContentInit {
   public screenWidth = -1;
 
   public showContact = false;
-  public showResume = false;
   public showHome = true;
 
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
@@ -35,26 +34,25 @@ export class AppComponent implements AfterContentInit {
     window.open('https://www.linkedin.com/in/steven-popovich-64bb8515b/', '_blank');
   }
 
-  public goToChalkbordDotCom() {
-    window.open('https://chalkbord.com', '_blank');
-  }
-
   public goToGithub() {
     window.open('https://github.com/stevepopovich', '_blank');
   }
 
-  public showResumeCard() {
-    this.showResume = true;
-    this.showContact = false;
-    this.showHome = false;
+  public goToMedium() {
+    window.open('https://medium.com/@steven.popovichh', '_blank');
   }
+
+  public goToGamechanger() {
+    window.open('https://gc.com', '_blank');
+  }
+
   public showContactCard() {
-    this.showResume = false;
     this.showContact = true;
     this.showHome = false;
   }
 
   public isMobile(): boolean {
+    console.log("checking mobile");
     return window.innerWidth < 700;
   }
 }

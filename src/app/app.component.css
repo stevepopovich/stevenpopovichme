@@ -135,6 +135,7 @@
 .contact-me-card {
   transition: all 0.75s;
   position: absolute;
+  min-height: 280px;
 }
 
 .home {
@@ -174,4 +175,14 @@
     rgb(0, 0, 0) -0.671871px 0.196441px 0px,
     rgb(0, 0, 0) -0.289692px -0.637243px 0px,
     rgb(0, 0, 0) 0.589746px -0.377094px 0px;
+}
+
+.gamechanger-button {
+  background-image: url("../assets/gc-logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgb(2,22,68);
+
+  font-size: 0em;
 }
