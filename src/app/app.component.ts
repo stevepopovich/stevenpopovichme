@@ -39,7 +39,7 @@ export class AppComponent implements AfterContentInit {
   }
 
   public goToMedium() {
-    window.open('https://medium.com/@steven.popovichh', '_blank');
+    window.open('https://medium.com/@steven.popovich', '_blank');
   }
 
   public goToGamechanger() {
