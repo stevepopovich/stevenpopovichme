@@ -39,7 +39,6 @@
 .content-area {
   width: 100%;
   position: absolute;
-  height: calc(100% - 108px);
 }
 
 .me-face {
@@ -92,6 +91,7 @@
   transition: all 0.75s;
   position: absolute;
   min-height: 280px;
+  background-color: black;
 }
 
 .home {

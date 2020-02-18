@@ -2,8 +2,9 @@
   <div [ngClass]="{'show-card': showHome, 'hidden-card': !showHome}" class="home center-content">
     <mat-grid-list cols="1" rowHeight="40px" gutterSize="0" class="home-column">
       <mat-grid-tile [rowspan]="4"></mat-grid-tile>
-      <mat-grid-tile *ngIf="!isMobile()" [colspan]="1" [rowspan]="2" class="title-text"> Because what we leave behind
-        matters </mat-grid-tile>
+      <mat-grid-tile *ngIf="!isMobile()" [colspan]="1" [rowspan]="2" class="title-text"> 
+        Because what we leave behind matters 
+      </mat-grid-tile>
       <mat-grid-tile [colspan]="1" [rowspan]="10">
         <mat-icon svgIcon="html" class="html-icon"></mat-icon>
       </mat-grid-tile>
