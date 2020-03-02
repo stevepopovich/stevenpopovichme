@@ -94,6 +94,13 @@
   background-color: black;
 }
 
+.about-me-card {
+  transition: all 0.75s;
+  position: absolute;
+  background-color: black;
+  max-width: 600px;
+}
+
 .home {
   transition: all 0.75s;
   position: absolute;

@@ -14,6 +14,7 @@ export class AppComponent implements AfterContentInit {
 
   public showContact = false;
   public showHome = true;
+  public showAbout = false;
 
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
@@ -47,8 +48,29 @@ export class AppComponent implements AfterContentInit {
   }
 
   public showContactCard() {
-    this.showContact = true;
-    this.showHome = false;
+    if (this.showContact) {
+      this.revealHome();
+    } else {
+      this.showContact = true;
+      this.showHome = false;
+      this.showAbout = false;
+    }
+  }
+
+  public showAboutCard() {
+    if (this.showAbout) {
+      this.revealHome();
+    } else {
+      this.showContact = false;
+      this.showHome = false;
+      this.showAbout = true;
+    }
+  }
+
+  public revealHome() {
+    this.showContact = false;
+    this.showHome = true;
+    this.showAbout = false;
   }
 
   public isMobile(): boolean {

@@ -10,9 +10,13 @@
       </mat-grid-tile>
     </mat-grid-list>
   </div>
+
   <div *ngIf="!isMobile()" style="margin-top: 16px">
     <mat-grid-list cols="1" rowHeight="40px" gutterSize="4" class="button-grid-desktop">
       <mat-grid-tile [colspan]="1">
+        <button (click)="showAboutCard()" class="consistent-button-width" mat-raised-button> ABOUT </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
         <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button> CONTACT </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
@@ -29,9 +33,13 @@
       </mat-grid-tile>
     </mat-grid-list>
   </div>
+
   <div *ngIf="isMobile()" style="margin-top: 16px">
     <mat-grid-list cols="2" rowHeight="40px" gutterSize="4" class="button-grid-mobile">
       <mat-grid-tile [colspan]="1">
+        <button (click)="showAboutCard()" class="consistent-button-width" mat-raised-button> ABOUT </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
         <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button> CONTACT </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
@@ -43,16 +51,32 @@
       <mat-grid-tile [colspan]="1">
         <button (click)="goToMedium()" class="consistent-button-width" mat-raised-button> MEDIUM </button>
       </mat-grid-tile>
-      <mat-grid-tile [colspan]="2">
+      <mat-grid-tile [colspan]="1">
         <button (click)="goToGamechanger()" class="consistent-button-width gamechanger-button" mat-raised-button> GC </button>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
+
   <div class="content-area center-content">
     <mat-card [ngClass]="{'hidden-card': !showContact,'show-card': showContact}" class="contact-me-card">
       <h3> Contact me </h3>
-      <p> Email: stevepopovich8@gmail.com </p>
+      <p> 
+        Email: <a href="mailto:stevepopovich8@gmail.com" style="color:white"> stevepopovich8@gmail.com </a>
+      </p>
       <img src="assets/me.jpg" class="me-face" />
     </mat-card>
   </div>
+
+  <div class="content-area center-content">
+    <mat-card [ngClass]="{'hidden-card': !showAbout,'show-card': showAbout}" class="about-me-card">
+      <h3> Developer! </h3>
+      <p> Steven is currently a software engineer at GameChanger. He writes full-stack native mobile applications for both iOS and Android. </p>
+      <p> He loves Kotlin and Typescript. He is particularly interested in scaling mobile applications. </p>
+      <p> He currently works with Kotlin, Swift, TypeScript, Rx, Realm, Anko, Postgres, Docker, AWS, Datadog, PagerDuty, Zeplin, Mongo Atlas, Clubhouse and Trello. </p>
+      <p> He has experience handling system-down incidents, diagnosing problems with DataDog, Mongo Atlas and AWS. </p>
+      <p> </p>
+      <p> Outside of work, Steven enjoys running, writing on Medium and writing more code. He is currently located in Brooklyn, New York.</p>
+    </mat-card>
+  </div>
+
 </div>
