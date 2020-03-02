@@ -117,6 +117,7 @@
 }
 
 .consistent-button-width {
+  transition: all 0.75s;
   width: 115px;
   margin-top: 0px;
   margin-bottom: 0px;

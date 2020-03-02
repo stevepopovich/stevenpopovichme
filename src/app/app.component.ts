@@ -16,6 +16,10 @@ export class AppComponent implements AfterContentInit {
   public showHome = true;
   public showAbout = false;
 
+  public showGoToLinkedIn = false;
+  public showGoToGithub = false;
+  public showGoToMedium = false;
+
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       'html',
@@ -32,15 +36,27 @@ export class AppComponent implements AfterContentInit {
   }
 
   public goToLinkedIn() {
-    window.open('https://www.linkedin.com/in/steven-popovich-64bb8515b/', '_blank');
+    if (this.showGoToLinkedIn) {
+      window.open('https://www.linkedin.com/in/steven-popovich-64bb8515b/', '_blank');
+    } else {
+      this.showGoToLinkedIn = true;
+    }
   }
 
   public goToGithub() {
-    window.open('https://github.com/stevepopovich', '_blank');
+    if (this.showGoToGithub) {
+      window.open('https://github.com/stevepopovich', '_blank');
+    } else {
+      this.showGoToGithub = true;
+    }
   }
 
   public goToMedium() {
-    window.open('https://medium.com/@steven.popovich', '_blank');
+    if (this.showGoToMedium) {
+      window.open('https://medium.com/@steven.popovich', '_blank');
+    } else {
+      this.showGoToMedium = true;
+    }
   }
 
   public goToGamechanger() {
