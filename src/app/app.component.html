@@ -51,16 +51,24 @@
         <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button> CONTACT </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
-        <button (click)="goToLinkedIn()" mat-raised-button class="consistent-button-width"> LINKEDIN </button>
+        <button (click)="goToLinkedIn()" mat-raised-button class="consistent-button-width"> 
+          LINKEDIN <mat-icon [@myAnimation] *ngIf="showGoToLinkedIn">launch</mat-icon> 
+        </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
-        <button (click)="goToGithub()" mat-raised-button class="consistent-button-width"> GITHUB </button>
+        <button (click)="goToGithub()" mat-raised-button class="consistent-button-width"> 
+          GITHUB <mat-icon [@myAnimation] *ngIf="showGoToGithub">launch</mat-icon>
+        </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
-        <button (click)="goToMedium()" class="consistent-button-width" mat-raised-button> MEDIUM </button>
+        <button (click)="goToMedium()" class="consistent-button-width" mat-raised-button>
+           MEDIUM <mat-icon [@myAnimation] *ngIf="showGoToMedium">launch</mat-icon>
+        </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
-        <button (click)="goToGamechanger()" class="consistent-button-width gamechanger-button" mat-raised-button> GC </button>
+        <button (click)="goToGamechanger()" class="consistent-button-width gamechanger-button" mat-raised-button> 
+          GC <mat-icon [@myAnimation] *ngIf="showGoToGamechanger" style="margin-left: 70px; margin-top: 2px;">launch</mat-icon> 
+        </button>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
