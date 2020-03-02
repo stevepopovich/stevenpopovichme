@@ -35,6 +35,7 @@ export class AppComponent implements AfterContentInit {
   public showContact = false;
   public showHome = true;
   public showAbout = false;
+  public showBooks = false;
 
   public showGoToLinkedIn = false;
   public showGoToGithub = false;
@@ -94,6 +95,7 @@ export class AppComponent implements AfterContentInit {
       this.showContact = true;
       this.showHome = false;
       this.showAbout = false;
+      this.showBooks = false;
     }
   }
 
@@ -104,6 +106,18 @@ export class AppComponent implements AfterContentInit {
       this.showContact = false;
       this.showHome = false;
       this.showAbout = true;
+      this.showBooks = false;
+    }
+  }
+
+  public showBooksDiv() {
+    if (this.showBooks) {
+      this.revealHome();
+    } else {
+      this.showContact = false;
+      this.showHome = false;
+      this.showAbout = false;
+      this.showBooks = true;
     }
   }
 
@@ -111,6 +125,7 @@ export class AppComponent implements AfterContentInit {
     this.showContact = false;
     this.showHome = true;
     this.showAbout = false;
+    this.showBooks = false;
   }
 
   public isMobile(): boolean {

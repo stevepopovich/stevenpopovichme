@@ -20,6 +20,9 @@
         <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button> CONTACT </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
+        <button (click)="showBooksDiv()" class="consistent-button-width" mat-raised-button> BOOKS </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
         <button (click)="goToLinkedIn()" mat-raised-button class="consistent-button-width"> 
           LINKEDIN <mat-icon [@myAnimation] *ngIf="showGoToLinkedIn">launch</mat-icon> 
         </button>
@@ -51,6 +54,9 @@
         <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button> CONTACT </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
+        <button (click)="showBooksDiv()" class="consistent-button-width" mat-raised-button> BOOKS </button>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
         <button (click)="goToLinkedIn()" mat-raised-button class="consistent-button-width"> 
           LINKEDIN <mat-icon [@myAnimation] *ngIf="showGoToLinkedIn">launch</mat-icon> 
         </button>
@@ -65,7 +71,7 @@
            MEDIUM <mat-icon [@myAnimation] *ngIf="showGoToMedium">launch</mat-icon>
         </button>
       </mat-grid-tile>
-      <mat-grid-tile [colspan]="1">
+      <mat-grid-tile [colspan]="2">
         <button (click)="goToGamechanger()" class="consistent-button-width gamechanger-button" mat-raised-button> 
           GC <mat-icon [@myAnimation] *ngIf="showGoToGamechanger" style="margin-left: 70px; margin-top: 2px;">launch</mat-icon> 
         </button>
@@ -81,18 +87,49 @@
       </p>
       <img src="assets/me.jpg" class="me-face" />
     </mat-card>
-  </div>
 
-  <div class="content-area center-content">
     <mat-card [ngClass]="{'hidden-card': !showAbout,'show-card': showAbout}" class="about-me-card">
       <h3> Developer! </h3>
       <p> Steven is currently a software engineer at GameChanger. He writes full-stack native mobile applications for both iOS and Android. </p>
       <p> He loves Kotlin and Typescript. He is particularly interested in scaling mobile applications. </p>
       <p> He currently works with Kotlin, Swift, TypeScript, Rx, Realm, Anko, Postgres, Docker, AWS, Datadog, PagerDuty, Zeplin, Mongo Atlas, Clubhouse and Trello. </p>
       <p> He has experience handling system-down incidents, diagnosing problems with DataDog, Mongo Atlas and AWS. </p>
-      <p> </p>
       <p> Outside of work, Steven enjoys running, writing on Medium and writing more code. He is currently located in Brooklyn, New York.</p>
     </mat-card>
   </div>
 
+  <div [ngClass]="{'hidden-card': !showBooks,'show-card': showBooks}">
+    <mat-grid-list  cols="1" gutterSize="0">
+      <mat-grid-tile [colspan]="1">
+        <mat-card style="background-color: black;">
+          <img src="assets/book-covers/clean-code.jpg" class="book-image" />
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <mat-card style="background-color: black;">
+          <img src="assets/book-covers/soft-skills.jpg" class="book-image" />
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <mat-card style="background-color: black;">
+          <img src="assets/book-covers/clean-coder.jpg" class="book-image" />
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <mat-card style="background-color: black;">
+          <img src="assets/book-covers/professional-android.jpg" class="book-image" />
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <mat-card style="background-color: black;">
+          <img src="assets/book-covers/field-guide-to-human-error.jpg" class="book-image" />
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <mat-card style="background-color: black;">
+          <img src="assets/book-covers/managing-humans1.jpg" class="book-image" />
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
 </div>
