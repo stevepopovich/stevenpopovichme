@@ -1,11 +1,31 @@
 import { Component, AfterViewInit, AfterContentInit, HostListener } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { trigger, transition, animate, style } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger(
+      'myAnimation',
+      [
+        transition(
+        ':enter', [
+          style({transform: 'translateX(0)', opacity: 0}),
+          animate('500ms', style({transform: 'translateX(0)', 'opacity': 1}))
+        ]
+      ),
+      transition(
+        ':leave', [
+          style({transform: 'translateX(0)', 'opacity': 1}),
+          animate('500ms', style({transform: 'translateX(0)', 'opacity': 0})),
+        ]
+      )
+      ]
+    )
+  ]
 })
 export class AppComponent implements AfterContentInit {
   public title = 'Steven Popovich';
@@ -19,6 +39,7 @@ export class AppComponent implements AfterContentInit {
   public showGoToLinkedIn = false;
   public showGoToGithub = false;
   public showGoToMedium = false;
+  public showGoToGamechanger = false;
 
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
@@ -60,7 +81,10 @@ export class AppComponent implements AfterContentInit {
   }
 
   public goToGamechanger() {
-    window.open('https://gc.com', '_blank');
+    if (this.showGoToGamechanger)
+      window.open('https://gc.com', '_blank');
+    else 
+      this.showGoToGamechanger = true;
   }
 
   public showContactCard() {
