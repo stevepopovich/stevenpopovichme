@@ -41,16 +41,12 @@ export class AppComponent implements AfterContentInit {
   public showGoToGithub = false;
   public showGoToMedium = false;
   public showGoToGamechanger = false;
+  public showGoToTwitter = false;
 
   constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       'html',
       sanitizer.bypassSecurityTrustResourceUrl('assets/html.svg'));
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.isMobile();
   }
 
   ngAfterContentInit(): void {
@@ -86,6 +82,13 @@ export class AppComponent implements AfterContentInit {
       window.open('https://gc.com', '_blank');
     else 
       this.showGoToGamechanger = true;
+  }
+
+  public goToTwitter() {
+    if (this.showGoToTwitter)
+      window.open('https://twitter.com/stevenpopovich8', '_blank');
+    else 
+      this.showGoToTwitter = true;
   }
 
   public showContactCard() {
@@ -129,7 +132,6 @@ export class AppComponent implements AfterContentInit {
   }
 
   public isMobile(): boolean {
-    console.log("checking mobile");
     return window.innerWidth < 700;
   }
 }
