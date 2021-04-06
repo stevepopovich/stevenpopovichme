@@ -54,7 +54,9 @@
         <button (click)="showContactCard()" class="consistent-button-width" mat-raised-button> CONTACT </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
-        <button (click)="showBooksDiv()" class="consistent-button-width" mat-raised-button> BOOKS </button>
+        <button (click)="goToTwitter()" class="consistent-button-width" mat-raised-button>
+          TWITTER <mat-icon [@myAnimation] *ngIf="showGoToTwitter">launch</mat-icon>
+       </button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="1">
         <button (click)="goToLinkedIn()" mat-raised-button class="consistent-button-width"> 
@@ -91,10 +93,10 @@
     <mat-card [ngClass]="{'hidden-card': !showAbout,'show-card': showAbout}" class="about-me-card">
       <h3> Developer! </h3>
       <p> Steven is currently a software engineer at GameChanger. He writes full-stack native mobile applications for both iOS and Android. </p>
-      <p> He loves Kotlin and Typescript. He is particularly interested in scaling mobile applications. </p>
-      <p> He currently works with Kotlin, Swift, TypeScript, Rx, Realm, Anko, Postgres, Docker, AWS, Datadog, PagerDuty, Zeplin, Mongo Atlas, Clubhouse and Trello. </p>
-      <p> He has experience handling system-down incidents, diagnosing problems with DataDog, Mongo Atlas and AWS. </p>
-      <p> Outside of work, Steven enjoys running, writing on Medium and writing more code. He is currently located in Brooklyn, New York.</p>
+      <p> He loves Kotlin and Typescript. He is particularly interested in scaling mobile applications and testing. </p>
+      <p> He currently works with Kotlin, Swift, TypeScript, Rx, Realm, Postgres, Docker, AWS, Datadog, Zeplin, Mongo Atlas, Clubhouse and Trello. </p>
+      <p> He has experience handling system-down incidents, diagnosing problems with DataDog, and AWS. </p>
+      <p> Outside of work, Steven enjoys running, basketball and writing more code. He is currently located in Brooklyn, New York.</p>
     </mat-card>
   </div>
 

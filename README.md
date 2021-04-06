@@ -1,6 +1,6 @@
 My personal site. An Oldie, but a Goodie.
 
-Check it out at [stevenpopovich.me](stevenpopovich.me)
+Check it out at [stevenpopovich.me](https://stevenpopovich.me/)
 
 # Run it
 `npm start`
