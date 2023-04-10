@@ -1,9 +1,0 @@
-{
-  "hosting": {
-    "public": "dist/stevenpopovichme",
-    "rewrites": [{
-      "source": "**",
-      "destination": "/index.html"
-    }]
-  }
-}
